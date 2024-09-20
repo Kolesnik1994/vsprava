@@ -1,0 +1,195 @@
+
+
+
+.multibutton {
+	position: fixed;
+	left: 30px;
+	/* bottom: 50px; */
+	bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	z-index: 50;
+	height: 250px; 
+	width: 250px;
+	transition: all 0.2s ease 0s;
+	cursor: pointer;
+}
+
+.multibutton:hover{
+	/* width: auto; */
+	/* height: auto; */
+}
+
+.multibutton__list {
+	/* position: relative; */
+	left: 13px;
+	top: 80px;
+	display: flex;
+	flex-direction: column;
+	width: clamp(15.625rem, 14.838rem + 3.94vw, 18.75rem);
+	align-items: flex-start;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 16px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 30px;
+	transform: scaleX(0.4) scaleY(0.4) translateY(150px);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+.multibutton__list.active{
+	position: relative;
+	top: auto;
+	bottom: 10px;
+	visibility: visible;
+	opacity: 1;
+	transform: scaleX(1) scaleY(1) translateY(0);
+	/* width: auto; */
+}
+
+.multibutton__item {
+	display:flex;
+	align-items: center;
+	justify-content: left;
+	gap: 10px;
+	cursor: pointer;
+	width: 100%;
+	transition: background-color 0.3s ease 0s;
+	padding: 5px 5px;
+	margin: 3px 0;
+	transform: scaleX(0.4) scaleY(0.4) translateY(150px);
+	opacity: 0;
+	visibility: hidden;
+	border-radius:10px;
+	transition: all 0.5s ease 0s;
+}
+@media(any-hover:hover){
+	.multibutton__item:hover{
+		background-color: #ccc;
+	}
+	.multibutton:hover .multibutton__list{
+		position: relative;
+		top: auto;
+		bottom: 10px;
+		visibility: visible;
+		opacity: 1;
+		transform: scaleX(1) scaleY(1) translateY(0);
+		/* width: auto; */
+	}
+
+	.multibutton:hover .multibutton__item{
+		visibility: visible;
+		opacity: 1;
+		transform: scaleX(1) scaleY(1) translateY(0);
+	}
+
+	.multibutton__button:hover{
+		background-color: #fff;
+		color: #000;
+	}
+	.multibutton__button:hover .multibutton__message path{
+		stroke: #000;
+		stroke-width: none;
+	}
+}
+.multibutton__button:focus{
+	outline: none;
+}
+
+.multibutton__list.active .multibutton__item{
+	visibility: visible;
+	opacity: 1;
+	transform: scaleX(1) scaleY(1) translateY(0);
+}
+
+.multibutton__icon {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	border-radius:50%;
+}
+.multibutton__icon .multibutton__email{
+	background-color: orange;
+	border-radius:50%;
+	padding: 5px;
+}
+.multibutton__title {
+	font-size: 14px;
+}
+
+.multibutton__button {
+	border-radius:50%;
+	background-color: #aa9166;
+	padding:15px;
+	display:grid;
+	justify-items: center;
+	color: #fff;
+	transition: all 0.3s ease 0s;
+	animation: animation_widget 3s linear infinite;
+	border: none;
+	/* z-index: 50; */
+}
+
+.multibutton__button.active{
+	background-color: #fff;
+	color: #000;
+}
+
+.multibutton__button.active .multibutton__message path {
+	stroke: #000;
+	stroke-width:none;
+}
+@keyframes animation_widget {
+	0% {
+		box-shadow: 0 0 0 0 grey, 0 0 0 0 rgb(98, 98, 225);
+	}
+
+	40% {
+		box-shadow: 0 0 0 13.7px grey, 0 0 0 5.81px rgb(98, 98, 225, 0.7);
+	}
+
+	80% {
+		box-shadow: 0 0 0 27.25px rgb(0, 0, 255, 0), 0 0 0 9.7px rgb(98, 98, 225, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 34.07px rgb(0, 0, 255, 0), 0 0 0 15.25px rgb(98, 98, 225, 0);
+	}
+}
+
+
+.multibutton__email{
+	fill: #000;
+}
+
+.multibutton__telegram{
+
+}
+
+/* .multibutton__telegram path{
+	fill:white
+} */
+
+.multibutton__viber{
+
+}
+
+.multibutton__viber g#Color-{
+	fill:#7F4DA0;
+}
+
+.multibutton__message{
+
+}
+
+.multibutton__message path{
+	stroke: #fff;
+	stroke-width: none;
+}
+.multibutton__message svg{
+
+}
+
+
